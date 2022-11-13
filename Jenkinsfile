@@ -1,10 +1,6 @@
 pipeline {
 	agent none
 	stages {
-		stage('Clean workspace') {
-    			deleteDir()
-    			sh 'ls -lah'
-		}
 		stage('Integration UI Test') {
 			parallel {
 				stage('Deploy') {
